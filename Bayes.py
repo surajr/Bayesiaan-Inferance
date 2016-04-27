@@ -136,11 +136,7 @@ class Net:
                     { string name: boolean value }, extended with the value of Y.
         Returns:
             A single double representing the probability that Y has the specified value.
-        Example: query the probability that A is False given B is False and E is True.
-        >>> net = Net('alarm.bn')
-        >>> e = {'B': False, 'E': True, 'A': False}
-        >>> net.querygiven('A', e)
-        0.71
+        
         """
         # Y has no parents
         if self.net[Y]['prob'] != -1:
